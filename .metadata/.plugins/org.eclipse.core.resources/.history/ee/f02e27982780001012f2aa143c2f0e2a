@@ -1,0 +1,23 @@
+package com.demo.base;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+
+import com.github.dockerjava.api.model.Config;
+
+import io.opentelemetry.sdk.autoconfigure.spi.ConfigProperties;
+
+public class BaseDriver {
+
+	
+	public static WebDriver driver;
+	Properties p=new Properties();
+	@BeforeMethod
+	public void setup() {
+		driver=new ChromeDriver();
+		driver.get(p.getProperty("baseUrl"));
+	}
+}

@@ -1,0 +1,47 @@
+package com.demo.tests;
+
+import java.util.List;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.demo.base.BaseDriver;
+import com.demo.pages.RootPage;
+import com.demo.pages.TextBox;
+
+public class TextBoxTest extends BaseDriver {
+	
+	@Test
+	public void fillUserInfo() throws InterruptedException {
+		RootPage rp=new RootPage(driver);
+		rp.clickElementTab();
+		rp.clickTextBox();
+		
+		TextBox tb=new TextBox(driver);
+		
+		String name="Ajay";
+		String email="ajay@gmail.com";
+		String address="123RoadParkStreet";
+		String permanentAdd="321RoadParkCircus";
+		
+		tb.fillUserInfo(name, email, address, permanentAdd);
+		tb.submitButton();
+		
+		Thread.sleep(3000);
+		
+		List<String> userDetail=tb.getVerifyInfoUser();
+		
+		for(String u:userDetail) {
+//			System.out.println(u);
+			if(u.contains(name)||u.contains(email)||u.contains(address)||u.contains(permanentAdd)) {
+				System.out.println(u);
+				Assert.assertEquals(u,name,"This is not Expected");
+				continue;
+			}else {
+				Assert.assertTrue(true);
+			}
+		}
+		
+	}
+
+}

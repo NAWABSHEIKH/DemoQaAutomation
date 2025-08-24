@@ -1,0 +1,29 @@
+package com.demo.tests;
+
+import org.testng.annotations.Test;
+
+import com.demo.base.BaseDriver;
+import com.demo.pages.RootPage;
+import com.demo.pages.TextBox;
+
+public class TextBoxTest extends BaseDriver {
+	
+	@Test
+	public void fillUserInfo() {
+		RootPage rp=new RootPage(driver);
+		rp.clickElementTab();
+		rp.clickTextBox();
+		
+		TextBox tb=new TextBox(driver);
+		
+		String name="Ajay";
+		String email="ajay@gmail.com";
+		String address="123RoadParkStreet";
+		String permanentAdd="321RoadParkCircus";
+		
+		tb.fillUserInfo(name, email, address, permanentAdd);
+		tb.submitButton();
+		
+	}
+
+}

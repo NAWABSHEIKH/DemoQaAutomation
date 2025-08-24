@@ -1,0 +1,39 @@
+package com.demo.pages;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class RootPage {
+    WebDriver driver;
+	public RootPage(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath = "//div[@class=\"card-body\"]//h5[text()=\"Elements\"]")
+	WebElement element;
+	
+	@FindBy(xpath="//span[text()=\"Text Box\"]")
+	WebElement textBox;
+	
+	@FindBy(xpath = "//h1[text()=\"Text Box\"]")
+	WebElement textBoxHeader;
+
+	public boolean isTextBoxPageDisplayed() {
+	    return textBoxHeader.isDisplayed();
+	}
+	
+	public void clickElementTab() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", element);
+		element.click();
+	}
+	public void clickTextBox() {
+		textBox.click();
+	}
+	
+	
+}

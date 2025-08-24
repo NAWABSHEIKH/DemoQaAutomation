@@ -1,0 +1,31 @@
+package com.demo.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class TextBox  {
+	
+	WebDriver driver;
+	public void TestBox(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//input[@id=\"userName\"]")
+	WebElement name;
+	
+	@FindBy(xpath="//input[@id=\"userEmail\"]")
+	WebElement email;
+	
+	@FindBy(xpath="//textarea[@id=\"currentAddress\"]")
+	WebElement address;
+	
+	@FindBy(xpath="//textarea[@id=\"permanentAddress\"]")
+	WebElement permanentAddress;
+	
+	@FindBy(xpath="//button[@id=\"submit\"]")
+	WebElement submit;
+
+}

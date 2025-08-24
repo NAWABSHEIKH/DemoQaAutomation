@@ -1,0 +1,21 @@
+package com.demo.base;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+
+
+
+public class BaseDriver {
+
+	
+	public static WebDriver driver;
+	Properties p=new Properties();
+	@BeforeMethod
+	public void setup() {
+		driver=new ChromeDriver();
+		driver.get(p.getProperty("baseUrl"));
+	}
+}

@@ -1,0 +1,81 @@
+package com.demo.pages;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class TextBox  {
+	
+	WebDriver driver;
+	public TextBox(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//input[@id=\"userName\"]")
+	WebElement nameUser;
+	
+	@FindBy(xpath="//input[@id=\"userEmail\"]")
+	WebElement emailUser;
+	
+	@FindBy(xpath="//textarea[@id=\"currentAddress\"]")
+	WebElement addressUser;
+	
+	@FindBy(xpath="//textarea[@id=\"permanentAddress\"]")
+	WebElement permanentAddressUser;
+	
+	@FindBy(xpath="//button[@id=\"submit\"]")
+	WebElement submit;
+	
+	//p[@id="name"]
+	//p[@id="email"]
+	//p[@id="currentAddress"]
+	//p[@id="permanentAddress"]
+	
+	@FindBy(xpath="//p[@id=\"name\"]")
+	WebElement nameVerify;
+	
+	@FindBy(xpath="//p[@id=\"email\"]")
+	WebElement emailVerify;
+	
+	@FindBy(xpath="//p[@id=\"currentAddress\"]")
+	WebElement addressVerify;
+	
+	@FindBy(xpath="//p[@id=\"permanentAddress\"]")
+	WebElement permanentAddressVerify;
+	
+	
+	
+	public void fillUserInfo(String name,String email,String address,String permanentAddress){
+		nameUser.sendKeys(name);
+		emailUser.sendKeys(email);
+		addressUser.sendKeys(address);
+		permanentAddressUser.sendKeys(permanentAddress);
+	}
+	
+	public void submitButton() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", submit);
+		submit.click();
+	}
+	
+	public List<String> getVerifyInfoUser(){
+		List<String> userInfo=new ArrayList<String>();
+		
+		String getName=nameVerify.getText();
+		String getEmail=emailVerify.getText();
+		String getaddress=addressVerify.getText();
+		String getPermanentAddress=permanentAddressVerify.getText();
+		
+		userInfo.add(getName);userInfo.add(getEmail);
+		userInfo.add(getaddress);userInfo.add(getPermanentAddress);
+		return userInfo;
+		
+	}
+
+}
