@@ -1,35 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-24T20:02:12 IST" name="Demo Automation Suite" finished-at="2025-08-24T20:05:20 IST" duration-ms="187331">
+  <suite started-at="2025-08-30T14:59:02 IST" name="Demo Automation Suite" finished-at="2025-08-30T15:00:41 IST" duration-ms="98797">
     <groups>
     </groups>
-    <test started-at="2025-08-24T20:02:12 IST" name="Smoke Tests" finished-at="2025-08-24T20:05:20 IST" duration-ms="187331">
+    <test started-at="2025-08-30T14:59:02 IST" name="Smoke Tests" finished-at="2025-08-30T15:00:41 IST" duration-ms="98797">
       <class name="com.demo.tests.ElementsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.ElementsTest@408d971b]" started-at="2025-08-24T20:02:12 IST" name="setup" finished-at="2025-08-24T20:02:53 IST" duration-ms="40872" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.ElementsTest@1573f9fc]" started-at="2025-08-30T14:59:02 IST" name="setup" finished-at="2025-08-30T14:59:12 IST" duration-ms="10152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="clickElementTab()[pri:0, instance:com.demo.tests.ElementsTest@408d971b]" started-at="2025-08-24T20:02:53 IST" name="clickElementTab" finished-at="2025-08-24T20:02:54 IST" duration-ms="820" status="PASS">
+        <test-method signature="clickElementTab()[pri:0, instance:com.demo.tests.ElementsTest@1573f9fc]" started-at="2025-08-30T14:59:12 IST" name="clickElementTab" finished-at="2025-08-30T14:59:13 IST" duration-ms="743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickElementTab -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.ElementsTest@408d971b]" started-at="2025-08-24T20:02:54 IST" name="tearDown" finished-at="2025-08-24T20:02:55 IST" duration-ms="1016" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.ElementsTest@1573f9fc]" started-at="2025-08-30T14:59:13 IST" name="tearDown" finished-at="2025-08-30T14:59:14 IST" duration-ms="832" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.demo.tests.ElementsTest -->
-      <class name="com.demo.tests.TextBoxTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.TextBoxTest@1fa121e2]" started-at="2025-08-24T20:02:55 IST" name="setup" finished-at="2025-08-24T20:05:07 IST" duration-ms="131636" status="PASS">
+      <class name="com.demo.tests.CheckBoxTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.CheckBoxTest@1ce24091]" started-at="2025-08-30T14:59:41 IST" name="setup" finished-at="2025-08-30T14:59:54 IST" duration-ms="12424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="fillUserInfo()[pri:0, instance:com.demo.tests.TextBoxTest@1fa121e2]" started-at="2025-08-24T20:05:07 IST" name="fillUserInfo" finished-at="2025-08-24T20:05:18 IST" duration-ms="11065" status="PASS">
+        <test-method signature="verifyCheckBoxSelection()[pri:0, instance:com.demo.tests.CheckBoxTest@1ce24091]" started-at="2025-08-30T14:59:54 IST" name="verifyCheckBoxSelection" finished-at="2025-08-30T14:59:59 IST" duration-ms="4972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCheckBoxSelection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.CheckBoxTest@1ce24091]" started-at="2025-08-30T14:59:59 IST" name="tearDown" finished-at="2025-08-30T14:59:59 IST" duration-ms="775" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demo.tests.CheckBoxTest -->
+      <class name="com.demo.tests.RadioButtonTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.RadioButtonTest@5dda768f]" started-at="2025-08-30T14:59:59 IST" name="setup" finished-at="2025-08-30T15:00:15 IST" duration-ms="15812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="clickRadioBtn(java.lang.String)[pri:0, instance:com.demo.tests.RadioButtonTest@5dda768f]" started-at="2025-08-30T15:00:15 IST" name="clickRadioBtn" data-provider="radioOptions" finished-at="2025-08-30T15:00:18 IST" duration-ms="2285" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickRadioBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.RadioButtonTest@5dda768f]" started-at="2025-08-30T15:00:18 IST" name="tearDown" finished-at="2025-08-30T15:00:18 IST" duration-ms="800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.RadioButtonTest@5dda768f]" started-at="2025-08-30T15:00:18 IST" name="setup" finished-at="2025-08-30T15:00:37 IST" duration-ms="18923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="clickRadioBtn(java.lang.String)[pri:0, instance:com.demo.tests.RadioButtonTest@5dda768f]" started-at="2025-08-30T15:00:37 IST" name="clickRadioBtn" data-provider="radioOptions" finished-at="2025-08-30T15:00:40 IST" duration-ms="2772" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[impressive]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickRadioBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.RadioButtonTest@5dda768f]" started-at="2025-08-30T15:00:40 IST" name="tearDown" finished-at="2025-08-30T15:00:41 IST" duration-ms="726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demo.tests.RadioButtonTest -->
+      <class name="com.demo.tests.TextBoxTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.TextBoxTest@fbd1f6]" started-at="2025-08-30T14:59:14 IST" name="setup" finished-at="2025-08-30T14:59:17 IST" duration-ms="3298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="fillUserInfo()[pri:0, instance:com.demo.tests.TextBoxTest@fbd1f6]" started-at="2025-08-30T14:59:17 IST" name="fillUserInfo" finished-at="2025-08-30T14:59:40 IST" duration-ms="23424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillUserInfo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.TextBoxTest@1fa121e2]" started-at="2025-08-24T20:05:18 IST" name="tearDown" finished-at="2025-08-24T20:05:20 IST" duration-ms="1851" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.TextBoxTest@fbd1f6]" started-at="2025-08-30T14:59:40 IST" name="tearDown" finished-at="2025-08-30T14:59:41 IST" duration-ms="756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -5,6 +5,9 @@
         <classes>
             <class name="com.demo.tests.ElementsTest"/>
             <class name="com.demo.tests.TextBoxTest"/>
+            <class name="com.demo.tests.CheckBoxTest"/>
+            <class name="com.demo.tests.RadioButtonTest"/>
+            
         </classes>
     </test> 
 </suite>

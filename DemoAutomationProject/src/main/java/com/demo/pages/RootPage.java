@@ -21,6 +21,12 @@ public class RootPage {
 	
 	@FindBy(xpath = "//h1[text()=\"Text Box\"]")
 	WebElement textBoxHeader;
+	
+	@FindBy(xpath="//li//span[text()=\"Check Box\"]")
+	WebElement checkBox;
+	
+	@FindBy(xpath="//span[text()=\"Radio Button\"]")
+	WebElement radioBtn;
 
 	public boolean isTextBoxPageDisplayed() {
 	    return textBoxHeader.isDisplayed();
@@ -33,6 +39,14 @@ public class RootPage {
 	}
 	public void clickTextBox() {
 		textBox.click();
+	}
+	
+	public void ClickCheckBoxTab() {
+		checkBox.click();
+	}
+	
+	public void clickRadioBtn() {
+		radioBtn.click();
 	}
 	
 	
