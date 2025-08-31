@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,16 @@
                       <a href="#" panel-name="suite-Demo_Automation_Suite" class="show-methods passed suite-Demo_Automation_Suite"> (show)</a> <!-- show-methods passed suite-Demo_Automation_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Demo_Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.WebTableTest" class="method navigator-link" hash-for-method="addUserInfo(Nawab, Pataudi, mn@gmail.com, 100, 1000, CSE)">addUserInfo(Nawab, Pataudi, mn@gmail.com, 100, 1000, CSE)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.WebTableTest" class="method navigator-link" hash-for-method="addUserInfo(Dawood, Pataudi, dnn@gmail.com, 10, 100000, Data Analyst)">addUserInfo(Dawood, Pataudi, dnn@gmail.com, 10, 100000, Data Analyst)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.ElementsTest" class="method navigator-link" hash-for-method="clickElementTab">clickElementTab</a> <!-- method navigator-link -->
@@ -207,6 +217,30 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Demo_Automation_Suite-class-passed -->
+          <div class="suite-Demo_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demo.tests.WebTableTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addUserInfo(Nawab, Pataudi, mn@gmail.com, 100, 1000, CSE)">
+                  </a> <!-- addUserInfo(Nawab, Pataudi, mn@gmail.com, 100, 1000, CSE) -->
+                  <span class="method-name">addUserInfo</span>
+                  <span class="parameters">(Nawab,Pataudi,mn@gmail.com,100,1000,CSE)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addUserInfo(Dawood, Pataudi, dnn@gmail.com, 10, 100000, Data Analyst)">
+                  </a> <!-- addUserInfo(Dawood, Pataudi, dnn@gmail.com, 10, 100000, Data Analyst) -->
+                  <span class="method-name">addUserInfo</span>
+                  <span class="parameters">(Dawood,Pataudi,dnn@gmail.com,10,100000,Data Analyst)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Demo_Automation_Suite-class-passed -->
         </div> <!-- panel Demo_Automation_Suite -->
         <div panel-name="test-xml-Demo_Automation_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -223,6 +257,7 @@
       &lt;class name=&quot;com.demo.tests.TextBoxTest&quot;/&gt;
       &lt;class name=&quot;com.demo.tests.CheckBoxTest&quot;/&gt;
       &lt;class name=&quot;com.demo.tests.RadioButtonTest&quot;/&gt;
+      &lt;class name=&quot;com.demo.tests.WebTableTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Smoke Tests --&gt;
 &lt;/suite&gt; &lt;!-- Demo Automation Suite --&gt;
@@ -236,7 +271,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Smoke Tests (4 classes)</span>
+                <span class="test-name">Smoke Tests (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -262,32 +297,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'fillUserInfo')
-data.setCell(0, 2, 'com.demo.tests.TextBoxTest')
-data.setCell(0, 3, 23424);
+data.setCell(0, 1, 'addUserInfo')
+data.setCell(0, 2, 'com.demo.tests.WebTableTest')
+data.setCell(0, 3, 23929);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyCheckBoxSelection')
-data.setCell(1, 2, 'com.demo.tests.CheckBoxTest')
-data.setCell(1, 3, 4972);
+data.setCell(1, 1, 'addUserInfo')
+data.setCell(1, 2, 'com.demo.tests.WebTableTest')
+data.setCell(1, 3, 12582);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'clickRadioBtn')
-data.setCell(2, 2, 'com.demo.tests.RadioButtonTest')
-data.setCell(2, 3, 2772);
+data.setCell(2, 1, 'verifyCheckBoxSelection')
+data.setCell(2, 2, 'com.demo.tests.CheckBoxTest')
+data.setCell(2, 3, 6625);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'clickRadioBtn')
-data.setCell(3, 2, 'com.demo.tests.RadioButtonTest')
-data.setCell(3, 3, 2285);
+data.setCell(3, 1, 'fillUserInfo')
+data.setCell(3, 2, 'com.demo.tests.TextBoxTest')
+data.setCell(3, 3, 4361);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'clickElementTab')
-data.setCell(4, 2, 'com.demo.tests.ElementsTest')
-data.setCell(4, 3, 743);
+data.setCell(4, 1, 'clickRadioBtn')
+data.setCell(4, 2, 'com.demo.tests.RadioButtonTest')
+data.setCell(4, 3, 2185);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'clickRadioBtn')
+data.setCell(5, 2, 'com.demo.tests.RadioButtonTest')
+data.setCell(5, 3, 1162);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'clickElementTab')
+data.setCell(6, 2, 'com.demo.tests.ElementsTest')
+data.setCell(6, 3, 769);
 window.suiteTableData['Demo_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Demo_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-Demo_Automation_Suite">
               </div> <!-- times-div-Demo_Automation_Suite -->
             </div> <!-- times-div -->
@@ -320,68 +363,95 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickElementTab</span>
-                <span class="method-start">10159 ms</span>
+                <span class="method-start">11889 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10902 ms</span>
+                <span class="method-start">12674 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.TextBoxTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">11734 ms</span>
+                <span class="method-start">15100 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">fillUserInfo</span>
-                <span class="method-start">15032 ms</span>
+                <span class="method-start">44647 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38464 ms</span>
+                <span class="method-start">49008 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.CheckBoxTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">39236 ms</span>
+                <span class="method-start">50463 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCheckBoxSelection</span>
-                <span class="method-start">51660 ms</span>
+                <span class="method-start">63282 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">56632 ms</span>
+                <span class="method-start">69915 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.RadioButtonTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">57422 ms</span>
+                <span class="method-start">73191 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickRadioBtn(yes)</span>
-                <span class="method-start">73234 ms</span>
+                <span class="method-start">91062 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">75519 ms</span>
+                <span class="method-start">92231 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">76319 ms</span>
+                <span class="method-start">92991 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickRadioBtn(impressive)</span>
-                <span class="method-start">95242 ms</span>
+                <span class="method-start">104785 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">98014 ms</span>
+                <span class="method-start">106978 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demo.tests.WebTableTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">108302 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addUserInfo(Nawab, Pataudi, mn@gmail.com, 100, 1000, CSE)</span>
+                <span class="method-start">128632 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">141221 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">142592 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addUserInfo(Dawood, Pataudi, dnn@gmail.com, 10, 100000, Data Analyst)</span>
+                <span class="method-start">146943 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">170881 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

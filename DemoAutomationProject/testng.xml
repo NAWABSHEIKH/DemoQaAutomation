@@ -7,6 +7,9 @@
             <class name="com.demo.tests.TextBoxTest"/>
             <class name="com.demo.tests.CheckBoxTest"/>
             <class name="com.demo.tests.RadioButtonTest"/>
+            <class name="com.demo.tests.WebTableTest"/>
+            
+            
             
         </classes>
     </test> 

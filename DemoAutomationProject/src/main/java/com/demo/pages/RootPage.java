@@ -27,6 +27,9 @@ public class RootPage {
 	
 	@FindBy(xpath="//span[text()=\"Radio Button\"]")
 	WebElement radioBtn;
+	
+	@FindBy(xpath="//span[text()=\"Web Tables\"]")
+	WebElement webTableTab;
 
 	public boolean isTextBoxPageDisplayed() {
 	    return textBoxHeader.isDisplayed();
@@ -47,6 +50,10 @@ public class RootPage {
 	
 	public void clickRadioBtn() {
 		radioBtn.click();
+	}
+	
+	public void clickWebTablePage(){
+		webTableTab.click();
 	}
 	
 	
