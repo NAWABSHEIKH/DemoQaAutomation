@@ -30,6 +30,46 @@ public class RootPage {
 	
 	@FindBy(xpath="//span[text()=\"Web Tables\"]")
 	WebElement webTableTab;
+	
+	@FindBy(xpath="//span[text()=\"Buttons\"]")
+	WebElement buttons;
+	
+	@FindBy(xpath="//h1[text()=\"Buttons\"]")
+	WebElement buttonsVerifyPage;
+	
+	@FindBy(xpath="//span[text()=\"Links\"]")
+	WebElement links;
+	
+	@FindBy(xpath="//span[text()=\"Upload and Download\"]")
+	WebElement uploadDownload;
+	
+	@FindBy(xpath="//span[text()=\"Dynamic Properties\"]")
+	WebElement clickDynamicPropBtn;
+	
+	public void clickDynamicProperties() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", clickDynamicPropBtn);
+		clickDynamicPropBtn.click();
+	}
+	
+	public void clickUploadDownload() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", uploadDownload);
+		uploadDownload.click();
+	}
+	
+	public void clickLinksTab() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", links);
+		links.click();
+	}
+	
+	public void clickButtonsTab() {
+		buttons.click();
+	}
+	public String buttonVerifyPage() {
+		return buttonsVerifyPage.getText();
+	}
 
 	public boolean isTextBoxPageDisplayed() {
 	    return textBoxHeader.isDisplayed();

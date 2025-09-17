@@ -1,12 +1,40 @@
-# Eclipse metadata
+# Eclipse specific files
 .metadata/
-.classpath
-.project
+*.log
+*.bak
+*.swp
+*.tmp
+.settings/
+bin/
+*.launch
+*.class
 
-# Build folders
-/target/
-/bin/
+# IntelliJ IDEA (in case you switch later)
+.idea/
+*.iml
+out/
 
-# OS-specific
+# Maven target directory
+target/
+
+# TestNG / JUnit reports
+test-output/
+surefire-reports/
+*.xml.html
+*.xml
+*.html
+
+# OS generated files
 .DS_Store
 Thumbs.db
+
+# Downloads directory (from your tests)
+DemoAutomationProject/downloads/
+
+# Logs
+*.log
+
+# Generated files (indexes, caches, history)
+**/.indexes/
+**/.history/
+**/.snap

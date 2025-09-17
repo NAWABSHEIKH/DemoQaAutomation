@@ -44,6 +44,10 @@ public class WebTable {
 	@FindBy(xpath="//span[@id=\"basic-addon2\"]")
 	WebElement clickSearchButton;
 	
+	//div[@class='rt-tbody']//div[@class='rt-tr-group'][1]//div[@class='rt-td']
+	@FindBy(xpath = "//div[@class='rt-tbody']//div[@class='rt-tr-group'][1]//div[@class='rt-td']")
+	List<WebElement> searchedRow;
+	
 	//div[@class="rt-tbody"]
 	
 //	@FindBy(xpath="//div[@class=\"rt-tr-group\"]")
@@ -83,5 +87,12 @@ public class WebTable {
 		clickSearchButton.click();
 	}
 	
+	public List<String> getSearchedRowData() {
+	    List<String> rowData = new ArrayList<>();
+	    for (WebElement cell : searchedRow) {
+	        rowData.add(cell.getText().trim());
+	    }
+	    return rowData;
+	}
 
 }

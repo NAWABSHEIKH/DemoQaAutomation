@@ -8,9 +8,10 @@
             <class name="com.demo.tests.CheckBoxTest"/>
             <class name="com.demo.tests.RadioButtonTest"/>
             <class name="com.demo.tests.WebTableTest"/>
-            
-            
-            
+            <class name="com.demo.tests.TextBoxTest"/>
+            <class name="com.demo.tests.UploadDownloadPageTest"/>
+            <class name="com.demo.tests.ButtonTest"/>
+               
         </classes>
     </test> 
 </suite>

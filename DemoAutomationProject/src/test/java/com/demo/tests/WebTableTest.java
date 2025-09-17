@@ -1,6 +1,9 @@
 package com.demo.tests;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -25,7 +28,26 @@ public class WebTableTest extends BaseDriver{
         wt.setSearchUserInfo(fname);
         wt.clickSearchInfoBtn();
         
-        Thread.sleep(3000);
+        Thread.sleep(5000);
+        
+     // retrieve row data
+        List<String> actualData = wt.getSearchedRowData();
+
+        // expected data in same column order as table
+        List<String> expectedData = new ArrayList<>();
+        expectedData.add(fname);
+        expectedData.add(lname);
+        expectedData.add(String.valueOf(age));
+        expectedData.add(email);
+        expectedData.add(String.valueOf(salary));
+        expectedData.add(department);
+        expectedData.add(""); // for Action column (empty text)
+
+        // validation
+        assert actualData.equals(expectedData) : 
+            "❌ Data mismatch! Expected: " + expectedData + " but found: " + actualData;
+
+        System.out.println("✅ Data matched successfully: " + actualData);
         
         
 	}
@@ -33,7 +55,7 @@ public class WebTableTest extends BaseDriver{
 	@DataProvider(name="dataUserInfo")
 	public Object[][] setUserData(){
 		Object data[][]={
-				{"Nawab", "Pataudi", "mn@gmail.com", 100, 1000, "CSE"},
+				{"Nawab", "Pataudi", "mn@gmail.com", 99, 1000, "CSE"},
 				{"Dawood", "Pataudi", "dnn@gmail.com", 10, 100000, "Data Analyst"},
 		};
 		return data;
