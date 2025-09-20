@@ -46,6 +46,15 @@ public class RootPage {
 	@FindBy(xpath="//span[text()=\"Dynamic Properties\"]")
 	WebElement clickDynamicPropBtn;
 	
+	@FindBy(xpath="//h5[text()=\"Forms\"]")
+	WebElement forms;
+	
+	public void clickFormTab() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", forms);
+		forms.click();
+	}
+	
 	public void clickDynamicProperties() {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView()", clickDynamicPropBtn);
