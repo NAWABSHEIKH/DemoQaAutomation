@@ -26,9 +26,6 @@ public class ButtonsPage {
 	@FindBy(xpath="//button[text()=\"Click Me\"]")
 	WebElement normalClick;
 	
-	//p[@id="doubleClickMessage"]
-	//p[@id="rightClickMessage"]
-	//p[@id="dynamicClickMessage"]
 	
 	@FindBy(xpath="//p[@id=\"doubleClickMessage\"]")
 	WebElement doubleClickText;
@@ -58,11 +55,13 @@ public class ButtonsPage {
 	}
 	
 	public void rightClick() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", rightClick);
 		act.contextClick(rightClick).perform();
 	}
 	public void normalClick() {
-//		JavascriptExecutor js=(JavascriptExecutor)driver;
-//		js.executeScript("arguments[0].scrollIntoView()", normalClick);
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", normalClick);
 		act.click(normalClick).perform();
 	}
 	

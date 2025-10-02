@@ -81,6 +81,22 @@ public class FormPage {
 	@FindBy(xpath="//button[@id=\"submit\"]")
 	WebElement submitBtn;
 	
+	@FindBy(xpath="//div[@id=\"example-modal-sizes-title-lg\"]")
+	WebElement heading;
+	
+	@FindBy(xpath="//tbody//tr//td[2]")
+	List<WebElement> values;
+	
+	public List<WebElement> getListOfValue(){
+		List<WebElement> displayValues=new ArrayList<>();
+		displayValues.addAll(values);
+		return displayValues;
+	}
+	
+	public String getSubmitHeading() {
+		return heading.getText();
+	}
+	
 	public void submitBtn(){
 		submitBtn.click();
 		System.out.println("You have finallly submitted the button");

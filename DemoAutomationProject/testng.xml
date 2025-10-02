@@ -11,6 +11,8 @@
             <class name="com.demo.tests.TextBoxTest"/>
             <class name="com.demo.tests.UploadDownloadPageTest"/>
             <class name="com.demo.tests.ButtonTest"/>
+            <class name="com.demo.tests.FormTest"/>
+            
                
         </classes>
     </test> 

@@ -14,6 +14,7 @@ public class ButtonTest extends BaseDriver {
 	    rp.clickElementTab();
 	    rp.clickButtonsTab();
 	    
+	    Thread.sleep(2000);
 	    Assert.assertEquals(rp.buttonVerifyPage(), "Buttons");
 	    
 	    ButtonsPage bp=new ButtonsPage(driver);

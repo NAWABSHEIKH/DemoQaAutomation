@@ -49,6 +49,15 @@ public class RootPage {
 	@FindBy(xpath="//h5[text()=\"Forms\"]")
 	WebElement forms;
 	
+	@FindBy(xpath="//h5[contains(text(),\"Alerts, Frame & Windows\")]")
+	WebElement aleFraWin;
+	
+	public void clickAlertFrameWindow() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", aleFraWin);
+		aleFraWin.click();
+	}
+	
 	public void clickFormTab() {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView()", forms);

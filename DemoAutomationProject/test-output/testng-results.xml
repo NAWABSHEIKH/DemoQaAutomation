@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-20T10:48:38 IST" name="Default suite" finished-at="2025-09-20T10:49:41 IST" duration-ms="63009">
+  <suite started-at="2025-10-01T23:11:59 IST" name="Default suite" finished-at="2025-10-01T23:12:49 IST" duration-ms="49683">
     <groups>
     </groups>
-    <test started-at="2025-09-20T10:48:38 IST" name="Default test" finished-at="2025-09-20T10:49:41 IST" duration-ms="63009">
-      <class name="com.demo.tests.FormTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.FormTest@557caf28]" started-at="2025-09-20T10:48:39 IST" name="setup" finished-at="2025-09-20T10:48:53 IST" duration-ms="14430" status="PASS">
+    <test started-at="2025-10-01T23:11:59 IST" name="Default test" finished-at="2025-10-01T23:12:49 IST" duration-ms="49683">
+      <class name="com.demo.tests.BrowserWindowTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.BrowserWindowTest@75d4a5c2]" started-at="2025-10-01T23:11:59 IST" name="setup" finished-at="2025-10-01T23:12:40 IST" duration-ms="40803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyUserDetails()[pri:0, instance:com.demo.tests.FormTest@557caf28]" started-at="2025-09-20T10:48:53 IST" name="verifyUserDetails" finished-at="2025-09-20T10:49:30 IST" duration-ms="36730" status="PASS">
+        <test-method signature="verifyWindowTestCase()[pri:0, instance:com.demo.tests.BrowserWindowTest@75d4a5c2]" started-at="2025-10-01T23:12:40 IST" name="verifyWindowTestCase" finished-at="2025-10-01T23:12:48 IST" duration-ms="7666" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.FormTest@557caf28]" started-at="2025-09-20T10:49:30 IST" name="tearDown" finished-at="2025-09-20T10:49:41 IST" duration-ms="11635" status="PASS">
+        </test-method> <!-- verifyWindowTestCase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.BrowserWindowTest@75d4a5c2]" started-at="2025-10-01T23:12:48 IST" name="tearDown" finished-at="2025-10-01T23:12:49 IST" duration-ms="1080" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.demo.tests.FormTest -->
+      </class> <!-- com.demo.tests.BrowserWindowTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
