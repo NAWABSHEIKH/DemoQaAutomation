@@ -12,6 +12,11 @@
             <class name="com.demo.tests.UploadDownloadPageTest"/>
             <class name="com.demo.tests.ButtonTest"/>
             <class name="com.demo.tests.FormTest"/>
+            <class name="com.demo.tests.FrameTest"/>
+            <class name="com.demo.tests.AlertButtonTest"/>
+            <class name="com.demo.tests.LinksTest"/>
+           
+            
             
                
         </classes>

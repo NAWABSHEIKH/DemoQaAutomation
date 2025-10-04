@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demo.tests.AlertButtonTest">
+      <class name="com.demo.tests.FrameTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verifyAlertButton"/>
+          <include name="verifyFrameScenerio"/>
         </methods>
-      </class> <!-- com.demo.tests.AlertButtonTest -->
+      </class> <!-- com.demo.tests.FrameTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
