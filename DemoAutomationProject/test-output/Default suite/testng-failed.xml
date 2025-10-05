@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demo.tests.FrameTest">
+      <class name="com.demo.tests.NestedFrameTest">
         <methods>
           <include name="setup"/>
+          <include name="verifyNestedFrameScenerio"/>
           <include name="tearDown"/>
-          <include name="verifyFrameScenerio"/>
         </methods>
-      </class> <!-- com.demo.tests.FrameTest -->
+      </class> <!-- com.demo.tests.NestedFrameTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

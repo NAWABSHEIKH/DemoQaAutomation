@@ -14,10 +14,8 @@
             <class name="com.demo.tests.FormTest"/>
             <class name="com.demo.tests.FrameTest"/>
             <class name="com.demo.tests.AlertButtonTest"/>
-            <class name="com.demo.tests.LinksTest"/>
-           
-            
-            
+            <class name="com.demo.tests.LinksTest"/> 
+            <class name="com.demo.tests.NestedFrameTest"/> 
                
         </classes>
     </test> 

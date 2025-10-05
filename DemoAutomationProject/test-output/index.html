@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Demo_Automation_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Demo Automation Suite</span>
+              <span class="suite-name border-failed">Demo Automation Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">13 methods,   13 passed</span>
+                    <span class="method-stats">14 methods, 1 failed,   13 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Demo_Automation_Suite" class="hide-methods failed suite-Demo_Automation_Suite"> (hide)</a> <!-- hide-methods failed suite-Demo_Automation_Suite -->
+                      <a href="#" panel-name="suite-Demo_Automation_Suite" class="show-methods failed suite-Demo_Automation_Suite"> (show)</a> <!-- show-methods failed suite-Demo_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Demo_Automation_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.FormTest" class="method navigator-link" hash-for-method="verifyUserDetails">verifyUserDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Demo_Automation_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -158,12 +172,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.UploadDownloadPageTest" class="method navigator-link" hash-for-method="verifyUploadDownload">verifyUploadDownload</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.NestedFrameTest" class="method navigator-link" hash-for-method="verifyNestedFrameScenario">verifyNestedFrameScenario</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.FormTest" class="method navigator-link" hash-for-method="verifyUserDetails">verifyUserDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Demo_Automation_Suite" title="com.demo.tests.UploadDownloadPageTest" class="method navigator-link" hash-for-method="verifyUploadDownload">verifyUploadDownload</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Demo_Automation_Suite -->
@@ -178,6 +192,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Demo_Automation_Suite" class="panel Demo_Automation_Suite">
+          <div class="suite-Demo_Automation_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.demo.tests.FormTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserDetails">
+                  </a> <!-- verifyUserDetails -->
+                  <span class="method-name">verifyUserDetails</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;label title=&quot;&quot; for=&quot;gender-radio-3&quot; class=&quot;custom-control-label&quot;&gt;...&lt;/label&gt; is not clickable at point (732, 508). Other element would receive the click: &lt;iframe frameborder=&quot;0&quot; src=&quot;https://f01960e65fe93263da258b33af23dd0a.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html&quot; id=&quot;google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0&quot; title=&quot;3rd party ad content&quot; name=&quot;&quot; scrolling=&quot;no&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;809&quot; height=&quot;100&quot; data-is-safeframe=&quot;true&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; allow=&quot;private-state-token-redemption;attribution-reporting&quot; aria-label=&quot;Advertisement&quot; tabindex=&quot;0&quot; data-google-container-id=&quot;1&quot; style=&quot;border: 0px; vertical-align: bottom;&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=140.0.7339.208)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [077f7cc1466375d12bc27bbec4e1b7b0, clickElement {id=f.021ABDCB2E19B7711452F8F6C549CE4F.d.FE8151E9126A33454A3FAE85F7687B9B.e.67}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\md786\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52714/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (077f7cc1466375d12bc27bbec4e1b7b0)] -&gt; xpath: //label[contains(@for,&apos;gender-radio&apos;)]]
+Session ID: 077f7cc1466375d12bc27bbec4e1b7b0
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.demo.pages.FormPage.getGenderInfo(FormPage.java:180)
+	at com.demo.tests.FormTest.verifyUserDetails(FormTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Demo_Automation_Suite-class-failed -->
           <div class="suite-Demo_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -241,6 +293,21 @@
           <div class="suite-Demo_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.demo.tests.NestedFrameTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyNestedFrameScenario">
+                  </a> <!-- verifyNestedFrameScenario -->
+                  <span class="method-name">verifyNestedFrameScenario</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Demo_Automation_Suite-class-passed -->
+          <div class="suite-Demo_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.demo.tests.ButtonTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -256,21 +323,6 @@
           <div class="suite-Demo_Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.demo.tests.AlertButtonTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyAlertButton">
-                  </a> <!-- verifyAlertButton -->
-                  <span class="method-name">verifyAlertButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Demo_Automation_Suite-class-passed -->
-          <div class="suite-Demo_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">com.demo.tests.CheckBoxTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -279,6 +331,21 @@
                   <a name="verifyCheckBoxSelection">
                   </a> <!-- verifyCheckBoxSelection -->
                   <span class="method-name">verifyCheckBoxSelection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Demo_Automation_Suite-class-passed -->
+          <div class="suite-Demo_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.demo.tests.AlertButtonTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAlertButton">
+                  </a> <!-- verifyAlertButton -->
+                  <span class="method-name">verifyAlertButton</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -303,21 +370,6 @@
                   </a> <!-- clickRadioBtn(yes) -->
                   <span class="method-name">clickRadioBtn</span>
                   <span class="parameters">(yes)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Demo_Automation_Suite-class-passed -->
-          <div class="suite-Demo_Automation_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.demo.tests.FormTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserDetails">
-                  </a> <!-- verifyUserDetails -->
-                  <span class="method-name">verifyUserDetails</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -385,6 +437,7 @@
       &lt;class name=&quot;com.demo.tests.FrameTest&quot;/&gt;
       &lt;class name=&quot;com.demo.tests.AlertButtonTest&quot;/&gt;
       &lt;class name=&quot;com.demo.tests.LinksTest&quot;/&gt;
+      &lt;class name=&quot;com.demo.tests.NestedFrameTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Smoke Tests --&gt;
 &lt;/suite&gt; &lt;!-- Demo Automation Suite --&gt;
@@ -398,7 +451,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Smoke Tests (12 classes)</span>
+                <span class="test-name">Smoke Tests (13 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -424,64 +477,68 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(13);
+data.addRows(14);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyLinksMovable')
-data.setCell(0, 2, 'com.demo.tests.LinksTest')
-data.setCell(0, 3, 39663);
+data.setCell(0, 1, 'addUserInfo')
+data.setCell(0, 2, 'com.demo.tests.WebTableTest')
+data.setCell(0, 3, 37066);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyUserDetails')
 data.setCell(1, 2, 'com.demo.tests.FormTest')
-data.setCell(1, 3, 25143);
+data.setCell(1, 3, 35341);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addUserInfo')
-data.setCell(2, 2, 'com.demo.tests.WebTableTest')
-data.setCell(2, 3, 20859);
+data.setCell(2, 1, 'verifyLinksMovable')
+data.setCell(2, 2, 'com.demo.tests.LinksTest')
+data.setCell(2, 3, 32088);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'addUserInfo')
 data.setCell(3, 2, 'com.demo.tests.WebTableTest')
-data.setCell(3, 3, 17394);
+data.setCell(3, 3, 18260);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyFrameScenerio')
-data.setCell(4, 2, 'com.demo.tests.FrameTest')
-data.setCell(4, 3, 14126);
+data.setCell(4, 1, 'verifyButtonClickable')
+data.setCell(4, 2, 'com.demo.tests.ButtonTest')
+data.setCell(4, 3, 15331);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyButtonClickable')
-data.setCell(5, 2, 'com.demo.tests.ButtonTest')
-data.setCell(5, 3, 11553);
+data.setCell(5, 1, 'fillUserInfo')
+data.setCell(5, 2, 'com.demo.tests.TextBoxTest')
+data.setCell(5, 3, 13355);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyUploadDownload')
 data.setCell(6, 2, 'com.demo.tests.UploadDownloadPageTest')
-data.setCell(6, 3, 11528);
+data.setCell(6, 3, 12038);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyAlertButton')
 data.setCell(7, 2, 'com.demo.tests.AlertButtonTest')
-data.setCell(7, 3, 10867);
+data.setCell(7, 3, 11022);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'clickRadioBtn')
 data.setCell(8, 2, 'com.demo.tests.RadioButtonTest')
-data.setCell(8, 3, 6704);
+data.setCell(8, 3, 10985);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'fillUserInfo')
-data.setCell(9, 2, 'com.demo.tests.TextBoxTest')
-data.setCell(9, 3, 6524);
+data.setCell(9, 1, 'clickRadioBtn')
+data.setCell(9, 2, 'com.demo.tests.RadioButtonTest')
+data.setCell(9, 3, 10250);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'verifyCheckBoxSelection')
 data.setCell(10, 2, 'com.demo.tests.CheckBoxTest')
-data.setCell(10, 3, 4179);
+data.setCell(10, 3, 10137);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'clickElementTab')
-data.setCell(11, 2, 'com.demo.tests.ElementsTest')
-data.setCell(11, 3, 2660);
+data.setCell(11, 1, 'verifyFrameScenerio')
+data.setCell(11, 2, 'com.demo.tests.FrameTest')
+data.setCell(11, 3, 6110);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'clickRadioBtn')
-data.setCell(12, 2, 'com.demo.tests.RadioButtonTest')
-data.setCell(12, 3, 1823);
+data.setCell(12, 1, 'verifyNestedFrameScenario')
+data.setCell(12, 2, 'com.demo.tests.NestedFrameTest')
+data.setCell(12, 3, 2652);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'clickElementTab')
+data.setCell(13, 2, 'com.demo.tests.ElementsTest')
+data.setCell(13, 3, 1264);
 window.suiteTableData['Demo_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Demo_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Demo_Automation_Suite">
               </div> <!-- times-div-Demo_Automation_Suite -->
             </div> <!-- times-div -->
@@ -514,185 +571,202 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickElementTab</span>
-                <span class="method-start">37541 ms</span>
+                <span class="method-start">36604 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">40209 ms</span>
+                <span class="method-start">37899 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.TextBoxTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">42908 ms</span>
+                <span class="method-start">38730 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">fillUserInfo</span>
-                <span class="method-start">57734 ms</span>
+                <span class="method-start">72181 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">64274 ms</span>
+                <span class="method-start">85557 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.CheckBoxTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">66735 ms</span>
+                <span class="method-start">87343 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCheckBoxSelection</span>
-                <span class="method-start">108563 ms</span>
+                <span class="method-start">99845 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">112742 ms</span>
+                <span class="method-start">109982 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.RadioButtonTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">113744 ms</span>
+                <span class="method-start">110792 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickRadioBtn(yes)</span>
-                <span class="method-start">147432 ms</span>
+                <span class="method-start">113975 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">149265 ms</span>
+                <span class="method-start">124225 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">151610 ms</span>
+                <span class="method-start">125021 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">clickRadioBtn(impressive)</span>
-                <span class="method-start">184924 ms</span>
+                <span class="method-start">159306 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">191634 ms</span>
+                <span class="method-start">170299 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.WebTableTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">192751 ms</span>
+                <span class="method-start">172753 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addUserInfo(Nawab, Pataudi, mn@gmail.com, 99, 1000, CSE)</span>
-                <span class="method-start">213977 ms</span>
+                <span class="method-start">177004 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">231388 ms</span>
+                <span class="method-start">214074 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">233658 ms</span>
+                <span class="method-start">215197 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">addUserInfo(Dawood, Pataudi, dnn@gmail.com, 10, 100000, Data Analyst)</span>
-                <span class="method-start">237281 ms</span>
+                <span class="method-start">232351 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">258151 ms</span>
+                <span class="method-start">250616 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.UploadDownloadPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">259028 ms</span>
+                <span class="method-start">251877 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUploadDownload</span>
-                <span class="method-start">293531 ms</span>
+                <span class="method-start">261056 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">305064 ms</span>
+                <span class="method-start">273107 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.ButtonTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">305761 ms</span>
+                <span class="method-start">274118 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyButtonClickable</span>
-                <span class="method-start">341150 ms</span>
+                <span class="method-start">308176 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">352711 ms</span>
+                <span class="method-start">323515 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.FormTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">353548 ms</span>
+                <span class="method-start">324603 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyUserDetails</span>
-                <span class="method-start">387499 ms</span>
+                <span class="method-start">328253 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">412643 ms</span>
+                <span class="method-start">363635 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.FrameTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">413694 ms</span>
+                <span class="method-start">364675 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyFrameScenerio</span>
-                <span class="method-start">426548 ms</span>
+                <span class="method-start">398944 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">440682 ms</span>
+                <span class="method-start">405076 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.AlertButtonTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">441510 ms</span>
+                <span class="method-start">405918 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAlertButton</span>
-                <span class="method-start">455218 ms</span>
+                <span class="method-start">414903 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">466085 ms</span>
+                <span class="method-start">425933 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.demo.tests.LinksTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">467795 ms</span>
+                <span class="method-start">427002 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLinksMovable</span>
-                <span class="method-start">504048 ms</span>
+                <span class="method-start">461180 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">543711 ms</span>
+                <span class="method-start">493277 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.demo.tests.NestedFrameTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">493776 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyNestedFrameScenario</span>
+                <span class="method-start">505754 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">508409 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
