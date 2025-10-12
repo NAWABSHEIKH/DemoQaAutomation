@@ -52,6 +52,19 @@ public class RootPage {
 	@FindBy(xpath="//h5[contains(text(),\"Alerts, Frame & Windows\")]")
 	WebElement aleFraWin;
 	
+	@FindBy(xpath="//h5[text()=\"Widgets\"]")
+	WebElement  widgetSection;
+	
+	public void scrollIntoViewJS(WebDriver driver,WebElement element) {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", element);
+	}
+	
+	public void clickWidgetSection() {
+		scrollIntoViewJS(driver,widgetSection);
+		widgetSection.click();
+	}
+	
 	public void clickAlertFrameWindow() {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView()", aleFraWin);

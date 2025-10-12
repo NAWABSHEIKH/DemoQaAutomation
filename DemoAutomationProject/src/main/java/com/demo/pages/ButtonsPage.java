@@ -36,15 +36,23 @@ public class ButtonsPage {
 	@FindBy(xpath="//p[@id=\"dynamicClickMessage\"]")
 	WebElement normalClickText;
 	
+	public void scrollIntoViewJS(WebDriver driver,WebElement element) {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", element);
+	}
+	
 	public String getDoubleClickText() {
+		scrollIntoViewJS(driver,doubleClickText);
 		return doubleClickText.getText();
 	}
 	
 	public String getRightClickText() {
+		scrollIntoViewJS(driver,rightClickText);
 		return rightClickText.getText();
 	}
 	
 	public String getNormalClickText() {
+		scrollIntoViewJS(driver,normalClickText);
 		return normalClickText.getText();
 	}
 	

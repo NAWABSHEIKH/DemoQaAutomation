@@ -53,12 +53,17 @@ public class WebTable {
 //	@FindBy(xpath="//div[@class=\"rt-tr-group\"]")
 //	List<WebElement> getUserInfoFromTable;	
 	
+	
 	WebDriver driver;
 	public WebTable(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
+	public void scrollIntoViewJS(WebDriver driver,WebElement element) {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView()", element);
+	}
 	public void clickAddRecordBtn() {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView()", addNewRecord);
@@ -66,7 +71,6 @@ public class WebTable {
 	}
 	
 	public void setUserInfo(String firstName,String lastName,String email,int age,int salary,String department){
-		
 		this.firstName.sendKeys(firstName);
 		this.lastName.sendKeys(lastName);
 		this.userEmail.sendKeys(email);
@@ -76,14 +80,17 @@ public class WebTable {
 	}
 	
 	public void clickSubmit(){
+		scrollIntoViewJS(driver, submitBtn);
 		submitBtn.click();
 	}
 	
 	public void setSearchUserInfo(String name){
+		scrollIntoViewJS(driver, searchInputBox);
 		searchInputBox.sendKeys(name);
 	}
 	
 	public void clickSearchInfoBtn() {
+		scrollIntoViewJS(driver, clickSearchButton);
 		clickSearchButton.click();
 	}
 	

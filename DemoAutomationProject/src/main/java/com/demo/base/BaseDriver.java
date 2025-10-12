@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.demo.utilities.ExtentReportListener;
+
 public class BaseDriver {
 
     public static WebDriver driver;
@@ -41,6 +43,8 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/");
+        
+        ExtentReportListener.driver = driver; // ✅ share driver instance with listener
     }
 
     @AfterMethod

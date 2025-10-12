@@ -1,22 +1,26 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Demo Automation Suite">
-
+<listeners>
+    <listener class-name="com.demo.utilities.ExtentReportListener"/>
+</listeners>
     <test name="Smoke Tests">
         <classes>
             <class name="com.demo.tests.ElementsTest"/>
-            <class name="com.demo.tests.TextBoxTest"/>
             <class name="com.demo.tests.CheckBoxTest"/>
             <class name="com.demo.tests.RadioButtonTest"/>
             <class name="com.demo.tests.WebTableTest"/>
             <class name="com.demo.tests.TextBoxTest"/>
             <class name="com.demo.tests.UploadDownloadPageTest"/>
+            <class name="com.demo.tests.ProgressBarTest"/>      
             <class name="com.demo.tests.ButtonTest"/>
             <class name="com.demo.tests.FormTest"/>
             <class name="com.demo.tests.FrameTest"/>
             <class name="com.demo.tests.AlertButtonTest"/>
             <class name="com.demo.tests.LinksTest"/> 
             <class name="com.demo.tests.NestedFrameTest"/> 
-               
+            <class name="com.demo.tests.MenuTest"/> 
+            <class name="com.demo.tests.SliderTest"/>
+            <class name="com.demo.tests.WidgetTest"/> 
         </classes>
     </test> 
 </suite>
