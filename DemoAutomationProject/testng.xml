@@ -21,6 +21,8 @@
             <class name="com.demo.tests.MenuTest"/> 
             <class name="com.demo.tests.SliderTest"/>
             <class name="com.demo.tests.WidgetTest"/> 
+            <class name="com.demo.tests.SelectMenuTest"/> 
+            
         </classes>
     </test> 
 </suite>

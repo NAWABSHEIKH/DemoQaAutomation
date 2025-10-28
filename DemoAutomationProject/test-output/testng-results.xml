@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-12T11:26:29 IST" name="Default suite" finished-at="2025-10-12T11:27:04 IST" duration-ms="35654">
+  <suite started-at="2025-10-28T20:16:03 IST" name="Default suite" finished-at="2025-10-28T20:16:18 IST" duration-ms="15511">
     <groups>
     </groups>
-    <test started-at="2025-10-12T11:26:29 IST" name="Default test" finished-at="2025-10-12T11:27:04 IST" duration-ms="35654">
-      <class name="com.demo.tests.DatePickerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.DatePickerTest@3c46e67a]" started-at="2025-10-12T11:26:29 IST" name="setup" finished-at="2025-10-12T11:26:47 IST" duration-ms="18469" status="PASS">
+    <test started-at="2025-10-28T20:16:03 IST" name="Default test" finished-at="2025-10-28T20:16:18 IST" duration-ms="15511">
+      <class name="com.demo.tests.SelectMenuTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.SelectMenuTest@3c46e67a]" started-at="2025-10-28T20:16:03 IST" name="setup" finished-at="2025-10-28T20:16:10 IST" duration-ms="6949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySelectDateFormat()[pri:0, instance:com.demo.tests.DatePickerTest@3c46e67a]" started-at="2025-10-12T11:26:47 IST" name="verifySelectDateFormat" finished-at="2025-10-12T11:27:03 IST" duration-ms="15326" status="PASS">
+        <test-method signature="verifyAllDifferentSelectMenuOption()[pri:0, instance:com.demo.tests.SelectMenuTest@3c46e67a]" started-at="2025-10-28T20:16:10 IST" name="verifyAllDifferentSelectMenuOption" finished-at="2025-10-28T20:16:18 IST" duration-ms="7791" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySelectDateFormat -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.DatePickerTest@3c46e67a]" started-at="2025-10-12T11:27:03 IST" name="tearDown" finished-at="2025-10-12T11:27:04 IST" duration-ms="1638" status="PASS">
+        </test-method> <!-- verifyAllDifferentSelectMenuOption -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.SelectMenuTest@3c46e67a]" started-at="2025-10-28T20:16:18 IST" name="tearDown" finished-at="2025-10-28T20:16:18 IST" duration-ms="668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.demo.tests.DatePickerTest -->
+      </class> <!-- com.demo.tests.SelectMenuTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
