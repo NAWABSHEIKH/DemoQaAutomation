@@ -55,6 +55,15 @@ public class RootPage {
 	@FindBy(xpath="//h5[text()=\"Widgets\"]")
 	WebElement  widgetSection;
 	
+	@FindBy(xpath="//h5[text()='Interactions']")
+	WebElement  interactionBox;
+	
+	public void clickInteractionBox() {
+		scrollIntoViewJS(driver,interactionBox);
+		interactionBox.click();
+		
+	}
+	
 	public void scrollIntoViewJS(WebDriver driver,WebElement element) {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView()", element);
