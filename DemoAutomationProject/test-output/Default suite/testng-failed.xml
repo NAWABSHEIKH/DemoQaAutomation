@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.demo.tests.SortableTest">
+      <class name="com.demo.tests.DroppableTest">
         <methods>
           <include name="setup"/>
-          <include name="verifyAllSortableAction"/>
           <include name="tearDown"/>
+          <include name="verifyDroppableValidation"/>
         </methods>
-      </class> <!-- com.demo.tests.SortableTest -->
+      </class> <!-- com.demo.tests.DroppableTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
