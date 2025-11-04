@@ -10,13 +10,22 @@ import com.demo.pages.RootPage;
 public class DroppableTest extends BaseDriver{
 	
 	@Test
-	public void verifyDroppableValidation() {
+	public void verifyDroppableValidation() throws InterruptedException {
 		RootPage rp1=new RootPage(driver);
 		rp1.clickInteractionBox();
 		
 		DroppablePage dp=new DroppablePage(driver);
 		Assert.assertEquals(dp.clickAndVerifyDroppableTitle(), "Droppable");
 		Assert.assertEquals(dp.simpleDragAndDrop(), "#4682b4"); 
+		
+		 String actualColor = dp.clickAndVerifyAcceptableDragAndDrop();
+
+		    // Expected green shade (you can inspect element manually in browser)
+		    String expectedColor = "#3cb371";
+
+		    Assert.assertEquals(actualColor, expectedColor, 
+		        "❌ Droppable color did not change as expected when acceptable element was dragged!");
+		    System.out.println("✅ Droppable color changed correctly to green!");
 		
 	}
 

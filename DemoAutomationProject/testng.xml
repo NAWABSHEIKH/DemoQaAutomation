@@ -23,6 +23,8 @@
             <class name="com.demo.tests.WidgetTest"/> 
             <class name="com.demo.tests.SelectMenuTest"/> 
             <class name="com.demo.tests.SortableTest"/> 
+            <class name="com.demo.tests.DroppableTest"/> 
+            
             
         </classes>
     </test> 
