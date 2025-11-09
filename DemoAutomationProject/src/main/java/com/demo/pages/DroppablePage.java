@@ -1,6 +1,7 @@
 package com.demo.pages;
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -54,6 +56,51 @@ public class DroppablePage {
 	
 	@FindBy(xpath="//div[@id='acceptDropContainer']//div[@id='droppable']")
 	WebElement targetDroppableAccept;
+	
+	@FindBy(xpath="//a[@id=\"droppableExample-tab-preventPropogation\"]")
+	WebElement clickPreventPropagationTab;
+	
+	@FindBy(xpath="//div[@id=\"notGreedyInnerDropBox\"]")
+	WebElement getNotGreedyInnerDropBox;
+	
+	@FindBy(xpath="//div[@id=\"dragBox\"]")
+	WebElement dragBox;
+	
+	
+	public ArrayList<String> preventPropagationDragAndDrop(){
+		ArrayList<String> listValue=new ArrayList<>();
+		
+		scrollIntoViewJS(driver,clickPreventPropagationTab);
+		clickPreventPropagationTab.click();
+		
+//		scrollIntoViewJS(driver,dragBox);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(dragBox));
+		
+		String bgColor=getNotGreedyInnerDropBox.getCssValue("background-color");
+		String beforeInnerBoxText=getNotGreedyInnerDropBox.findElement(By.xpath("p")).getText();
+		System.out.println(beforeInnerBoxText);
+		String beforeHexColor=Color.fromString(bgColor).asHex();
+		System.out.println(beforeHexColor);
+		
+		Actions act=new Actions(driver);
+		act.clickAndHold(dragBox).perform();
+		
+		act.moveToElement(getNotGreedyInnerDropBox).pause(Duration.ofSeconds(6)).perform();
+		String bgColorAfter=getNotGreedyInnerDropBox.getCssValue("background-color");
+		String afterHexColor=Color.fromString(bgColorAfter).asHex();
+		System.out.println(afterHexColor);
+		
+		act.release().pause(3).perform();
+		String afterInnerBoxText=getNotGreedyInnerDropBox.findElement(By.xpath("p")).getText();
+		System.out.println(afterInnerBoxText);
+		
+		listValue.add(afterInnerBoxText);
+		listValue.add(afterHexColor);
+		
+		return listValue;
+		
+	}
 	
 	public String clickAndVerifyAcceptableDragAndDrop() throws InterruptedException {
 		scrollIntoViewJS(driver,acceptTab);
