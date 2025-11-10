@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class DroppablePage {
 
@@ -65,6 +67,82 @@ public class DroppablePage {
 	
 	@FindBy(xpath="//div[@id=\"dragBox\"]")
 	WebElement dragBox;
+	
+	@FindBy(xpath="//a[@id=\"droppableExample-tab-revertable\"]")
+	WebElement revertableTab;
+
+	@FindBy(xpath="//div[@id=\"revertable\"]")
+	WebElement revertSrcBox;
+	
+	@FindBy(xpath="//div[@id=\"notRevertable\"]")
+	WebElement nonRevertSrcBox;
+	
+	@FindBy(xpath="//div[@id='revertableDropContainer']//div[@id='droppable']")
+	WebElement revertAndNonRevertDroppable;
+	
+	
+	public ArrayList<Boolean> clickAndVerifyRevertableTab() throws InterruptedException {
+		ArrayList<Boolean> revertPosition=new ArrayList<>();
+		scrollIntoViewJS(driver,revertableTab);
+		revertableTab.click();
+		
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(revertSrcBox));
+		
+		Point revertInitialPosition=revertSrcBox.getLocation();
+		int xCordinate=revertInitialPosition.getX();
+		int yCordinate=revertInitialPosition.getY();
+		System.out.println(xCordinate+"  "+yCordinate);
+		
+		Actions act=new Actions(driver);
+		act.clickAndHold(revertSrcBox).perform();
+		act.moveToElement(revertAndNonRevertDroppable).release().perform();
+		
+		Thread.sleep(3000);
+		
+		
+		Point revertFinalPosition=revertSrcBox.getLocation();
+		int x2Cordinate=revertFinalPosition.getX();
+		int y2Cordinate=revertFinalPosition.getY();
+		System.out.println(x2Cordinate+"  "+y2Cordinate);
+		
+		if(xCordinate==x2Cordinate && yCordinate==y2Cordinate) {
+			System.out.println("true");
+			revertPosition.add(true);
+		}else {
+			System.out.println("false");
+			revertPosition.add(false);
+		}
+		
+		System.out.println("======Revert working===========");
+		
+		Point revertInitialPosition2=nonRevertSrcBox.getLocation();
+		int xCordinate3=revertInitialPosition2.getX();
+		int yCordinate3=revertInitialPosition2.getY();
+		System.out.println(xCordinate3+"  "+yCordinate3);
+		
+		Actions act2=new Actions(driver);
+		act2.clickAndHold(nonRevertSrcBox).perform();
+		act2.moveToElement(revertAndNonRevertDroppable).release().perform();
+		
+		Thread.sleep(3000);
+		
+		
+		Point revertFinalPosition2=revertSrcBox.getLocation();
+		int x2Cordinate4=revertFinalPosition2.getX();
+		int y2Cordinate4=revertFinalPosition2.getY();
+		System.out.println(x2Cordinate4+"  "+y2Cordinate4);
+		
+		if(xCordinate3==x2Cordinate4 && yCordinate3==y2Cordinate4) {
+			System.out.println("true");
+			revertPosition.add(true);
+		}else {
+			System.out.println("false");
+			revertPosition.add(false);
+		}
+		
+		return revertPosition;
+	}
 	
 	
 	public ArrayList<String> preventPropagationDragAndDrop(){

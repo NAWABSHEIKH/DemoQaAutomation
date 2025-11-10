@@ -33,6 +33,10 @@ public class DroppableTest extends BaseDriver{
 		  Assert.assertEquals(valueColorAndText.get(0), "Dropped!","Text didn't matched!");
 		  Assert.assertEquals(valueColorAndText.get(1),"#8fbc8f" ,"Color after dropped didn't matched!");
 		
+		ArrayList<Boolean> revertPositionResult= dp.clickAndVerifyRevertableTab();
+		Assert.assertTrue(revertPositionResult.get(0));
+		Assert.assertFalse(revertPositionResult.get(1));
+		  
 	}
 
 }

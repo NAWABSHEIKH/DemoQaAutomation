@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-09T10:15:11 IST" name="Default suite" finished-at="2025-11-09T10:15:38 IST" duration-ms="26978">
+  <suite started-at="2025-11-10T23:04:43 IST" name="Default suite" finished-at="2025-11-10T23:06:29 IST" duration-ms="105477">
     <groups>
     </groups>
-    <test started-at="2025-11-09T10:15:11 IST" name="Default test" finished-at="2025-11-09T10:15:38 IST" duration-ms="26978">
+    <test started-at="2025-11-10T23:04:43 IST" name="Default test" finished-at="2025-11-10T23:06:29 IST" duration-ms="105477">
       <class name="com.demo.tests.DroppableTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.DroppableTest@c730b35]" started-at="2025-11-09T10:15:12 IST" name="setup" finished-at="2025-11-09T10:15:16 IST" duration-ms="4163" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.demo.tests.DroppableTest@c730b35]" started-at="2025-11-10T23:04:43 IST" name="setup" finished-at="2025-11-10T23:06:09 IST" duration-ms="86205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyDroppableValidation()[pri:0, instance:com.demo.tests.DroppableTest@c730b35]" started-at="2025-11-09T10:15:16 IST" name="verifyDroppableValidation" finished-at="2025-11-09T10:15:37 IST" duration-ms="21714" status="PASS">
+        <test-method signature="verifyDroppableValidation()[pri:0, instance:com.demo.tests.DroppableTest@c730b35]" started-at="2025-11-10T23:06:09 IST" name="verifyDroppableValidation" finished-at="2025-11-10T23:06:28 IST" duration-ms="18479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDroppableValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.DroppableTest@c730b35]" started-at="2025-11-09T10:15:37 IST" name="tearDown" finished-at="2025-11-09T10:15:38 IST" duration-ms="1010" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demo.tests.DroppableTest@c730b35]" started-at="2025-11-10T23:06:28 IST" name="tearDown" finished-at="2025-11-10T23:06:29 IST" duration-ms="682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
